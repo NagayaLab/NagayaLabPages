@@ -6,10 +6,7 @@ body{
     line-height: 1.5;
     color: #333;
     background-color:#E2E2E2;
-    top: 0px;
-    left: 0px;
-    width: 1920px;
-    height: 5000px;
+    width: 100%;
 }
 
 /*section*/
@@ -21,28 +18,85 @@ body{
 }
 
 .section-headline{
-    text-align: center;
+    width: 70%;
+    height: 100%;
     font-size: 50px;
-    font-weight: bold;
-    margin: 0 0 40px;
+    margin:  0 auto;
 }
 
 
 /*about*/
 .about{
-    top: 1255px;
-    left: 400px;
-    width: 1120px;
-    height: 480px;
+    width: 70%;
+    height: 250px;
+    margin:  0 auto;
     background-color: #ffffff;
+    
 }
-
 /*about-caption*/
 .about-caption{
-    padding-left: 15px;
+    width: 100%;
+    display: flex;
+    align-items: center;    /* 垂直方向の中央揃え */
+    justify-content: center; /* 水平方向の中央揃え */
+    font-size: 24px;       /* 文字サイズの調整 */
+    color: #333;           /* 文字色の調整 */
+    height: 100%;          /* 高さを親要素に合わせる */
 }
-/*about-hedline*/
-.about-hedline{
-    margin: 0 0 20px;
-    font-size: 30px;
+
+
+
+.news-section {
+    padding: 30px 15px;
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.news{
+    width: 70%;
+    height: 350px;
+    margin:  0 auto;
+    background-color: #f90000;
+}
+
+.news-items {
+    width: 70%;
+    height: 100px;
+}
+
+.news-item {
+    width: 30%;
+    height: 50px;
+    background-color: #ffffff;
+    
+    border-radius: 5px;
+}
+
+.more-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    height: 120px;
+    background-color: #aeecef;
+    border: 2px solid #56a1b8;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+.more-box:hover {
+    background-color: #8edcd7;
+}
+
+.more-box span {
+    font-size: 20px;
+    color: #333;
+}
+
+.arrow {
+    font-size: 24px;
+    margin-left: 10px;
 }
