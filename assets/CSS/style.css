@@ -56,31 +56,36 @@ h2 {
 }
 
 .news{
+    display: flex;
     width: 70%;
-    height: 350px;
+    height: 260px;
     margin:  0 auto;
-    background-color: #f90000;
 }
 
 .news-items {
-    width: 70%;
-    height: 100px;
+    display: flex; /* .news-itemを横並びに */
+    flex-direction: column; /* 子要素を縦方向に並べる */
+    margin-right: 10px;
+    height: 450px;
+    width: 70%; /* 追加 */
 }
 
 .news-item {
-    width: 30%;
+    margin-bottom: 20px;
+    z-index: 3;
+    width: 100%; /* .news-items の幅に合わせる */
     height: 50px;
     background-color: #ffffff;
-    
     border-radius: 5px;
 }
 
 .more-box {
+    width: 30%; /* 残りの幅を .more-box に指定 */
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 20px;
-    height: 120px;
+    margin-top: 0;
+    height: 99%;
     background-color: #aeecef;
     border: 2px solid #56a1b8;
     border-radius: 8px;
