@@ -7,12 +7,15 @@ body{
     color: #333;
     background-color:#E2E2E2;
     width: 100%;
+    margin: 0px;
+    padding: 0px;
 }
 
 /*
 hero
 */
 .hero{
+    
     width: 100vw;
     height: 100vh;
     position: relative;
@@ -43,8 +46,7 @@ hero
     left: 0;
 }
 .header-logo{
-    margin: 0;
-
+    margin:0;
 }
 .header-logo > a{
     display: block;
@@ -227,4 +229,42 @@ h2 {
 .project-arrow {
     font-size: 24px;
     margin-left: 10px;
+}
+
+
+/* footer */
+.footer{
+    background-color: #333;
+    color: #fff;
+}
+.footer-map{
+    margin: 0;
+    padding: 40px 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.footer-map >iframe{
+    width: 60%;
+}
+.footer-mapinfo{
+    width: 40%;
+    padding: 25px;
+}
+.footer-maplogo{
+    font-size: 25px;
+    font-weight: bold;
+}
+.footer-mapaddress{
+    font-style: normal
+}
+.footer-mapaddress > a{
+    color: #fff;
+}
+.footer-line{
+    border-color: #444;
+}
+.footer-copy{
+    display: block;
+    text-align: center;
 }
