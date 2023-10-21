@@ -108,12 +108,16 @@ hero
     display: flex;
     align-items: center;    /* 垂直方向の中央揃え */
     justify-content: center; /* 水平方向の中央揃え */
-    font-size: 24px;       /* 文字サイズの調整 */
+    font-size: 150%;       /* 文字サイズの調整 */
     color: #333;           /* 文字色の調整 */
     height: 100%;          /* 高さを親要素に合わせる */
 }
 
-
+@media (max-width: 1000px) {
+    .about-description {
+        font-size: 80%;  /* より小さいフォントサイズに調整 */
+    }
+}
 
 .news-section {
     padding: 30px 15px;
@@ -175,7 +179,86 @@ h2 {
     margin-left: 10px;
 }
 
+/* member */
+.member-section {
+    padding: 30px 15px;
+}
 
+/* カードレイアウト部分をラッピングし、
+Flexboxを指定"space-between"で各アイテムを均等に配置し、
+最初と最後のアイテムを端に寄せます。*/
+#cardlayout-wrap {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+    margin: 2em auto;
+    max-width: 960px;
+    width: 100%;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+}
+
+/* リンクテキストの下線を非表示 */
+a.card-link {
+    text-decoration: none;
+}
+
+/* カードレイアウト内の画像を幅いっぱいに表示 */
+#cardlayout-wrap img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.card-figure {
+    margin: 0;
+    padding: 0;
+}
+
+/* カードレイアウトのタイトル部分 */
+.card-title {
+    margin: 0.6em 0 0;
+    color: #333;
+    text-align: center;
+    font-size: 20px;
+}
+
+/* カードレイアウトを1カラムで配置 */
+.card-list {
+    margin: 0.5em auto;
+    padding: 0;
+    width: 96%;
+    background: #f0f0f0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* 画面幅768px以上の場合カードレイアウトを2カラムで配置 */
+@media all and (min-width: 768px) {
+    .card-list {
+        margin: 0.5em 0;
+        width: calc(96% / 2); /* 96%幅を2で割るという指定 */
+    }
+}
+
+/* 画面幅992px以上の場合カードレイアウトを3カラムで配置 */
+@media all and (min-width: 992px) {
+    .card-list {
+        width: calc(96% / 5); /* 96%幅を3で割るという指定 */
+}
+    
+/* 最後の行が3列より少ない場合左寄せにレイアウトさせる */
+    #cardlayout-wrap::after{
+        content: "";
+        display: block;
+        width: calc(96% / 5);
+    }
+}
+
+/* project */
 .project-section {
     padding: 30px 15px;
 }
